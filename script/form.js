@@ -7,40 +7,55 @@ $( document ).ready(function() {
     takeFileFromJson();
 });
 
-function showDataForTask(fileData){
-    console.log("This is data from the file.json",fileData);
 
+
+function showDataForTask(fileData){
     /*
+    console.log("This is data from the file.json",fileData);
     console.log("this is the type of fileData ---",typeof(fileData));
     console.log("this is the type of fileData ---",typeof(x));
     console.log("this is the type of fileData ---",typeof(y));
     */
+    let contact = fileData['contact'];
+   // console.log(contact);
+    let standard = contact['standard'];
+    //console.log(standard);
+    $.each(contact, function (key, value) {
+        //console.log("this is key ----",key);
+        //console.log("this is value---",value);
 
-    $.each(fileData, function (key, value) {
-        console.log(key);
-        console.log(value);
+        console.log(contact.standard[0])
+        console.log(contact.standard[1])
+        console.log(contact.standard[2])
+        console.log(contact.standard[3])
+        console.log(contact.standard[4])
+        console.log(contact.standard[5])
+        console.log(contact.standard[6])
+        console.log(contact.standard[7])
+
     });
 }
+
 
 function takeFileFromJson() {
     $.ajax({
         type: "GET",
-        async:"false",
+        async: "false",
         url: "data/file.json",
         success: function (response) {
             showDataForTask(response);
         }
     });
-}
 
-function learningFunction(a,b,c,d){
-    //vadukovatam vachu anatadaniki example
-    console.log(a);
-    console.log(b);
-    console.log(c);
-    console.log(d);
-}
 
+    function learningFunction(a, b, c, d) {
+        //vadukovatam vachu anatadaniki example
+        //console.log(a);
+        //console.log(b);
+        //console.log(c);
+        //console.log(d);
+    }
+}
 
 
 

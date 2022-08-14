@@ -1,5 +1,4 @@
 
-
 {
   "contact": {
     "standard": [
@@ -18,6 +17,19 @@
       },
       {
         "field_name": "first_name",
+        "marketing-in-one": "first_name",
+        "first_name": "",
+        "datatype": "Text",
+        "required": 0,
+        "html_label": "Text",
+        "html_placeholder": "FirstName",
+        "html_hidden_field": 0,
+        "field_type": "Standard",
+        "php_type": "string",
+        "regex": ".*"
+      },
+      {
+        "field_name": "first_name_2",
         "marketing-in-one": "first_name",
         "first_name": "",
         "datatype": "Text",

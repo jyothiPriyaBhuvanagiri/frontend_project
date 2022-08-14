@@ -1,15 +1,15 @@
 //Global variables
 let x = [];
+let file = [];
 //this code will execute after page loading
-$( document ).ready(function() {
+$(document).ready(function () {
     let y = {};
     //take the file from the file.json
     takeFileFromJson();
 });
 
 
-
-function showDataForTask(fileData){
+function showDataForTask(fileData) {
     /*
     console.log("This is data from the file.json",fileData);
     console.log("this is the type of fileData ---",typeof(fileData));
@@ -17,22 +17,17 @@ function showDataForTask(fileData){
     console.log("this is the type of fileData ---",typeof(y));
     */
     let contact = fileData['contact'];
-   // console.log(contact);
+    // console.log(contact);
     let standard = contact['standard'];
     //console.log(standard);
     $.each(contact, function (key, value) {
+
         //console.log("this is key ----",key);
         //console.log("this is value---",value);
-
-        console.log(contact.standard[0])
-        console.log(contact.standard[1])
-        console.log(contact.standard[2])
-        console.log(contact.standard[3])
-        console.log(contact.standard[4])
-        console.log(contact.standard[5])
-        console.log(contact.standard[6])
-        console.log(contact.standard[7])
-
+        //only one console.log();
+        for (let i = 0; i < value.length; i++) {
+            console.log(value[i]);
+        }
     });
 }
 
@@ -49,20 +44,13 @@ function takeFileFromJson() {
 
 
     function learningFunction(a, b, c, d) {
-        //vadukovatam vachu anatadaniki example
-        //console.log(a);
-        //console.log(b);
-        //console.log(c);
-        //console.log(d);
+//vadukovatam vachu anatadaniki example
+//console.log(a);
+//console.log(b);
+//console.log(c);
+//console.log(d);
     }
 }
-
-
-
-
-
-
-
 
 
 //console.log(Object.keys(object.contact.standard[0]))

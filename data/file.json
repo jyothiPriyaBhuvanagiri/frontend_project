@@ -4,7 +4,7 @@
     "standard": [
       {
         "field_name": "email",
-        "marketing-in-one": "email",
+        "marketing-in-one": "Email",
         "email": "",
         "datatype": "Email",
         "required": 1,
@@ -17,7 +17,7 @@
       },
       {
         "field_name": "first_name",
-        "marketing-in-one": "first_name",
+        "marketing-in-one": "last_name",
         "first_name": "",
         "datatype": "Text",
         "required": 0,

@@ -26,10 +26,6 @@ function showDataForTask(fileData) {
 }
 
  */
-
-
-
-
         function takeFileFromJson() {
             $.ajax({
                 type: "GET",
@@ -37,25 +33,27 @@ function showDataForTask(fileData) {
                 url: "data/file.json",
                 success: function (response) {
                     //showDataForTask(response);
-                     let data =response
-                    document.getElementById("formFile").innerHTML=data.contact.standard;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.marketinginone;
-                    document.getElementById('formFile').innerHTML=data.contact.standard.email;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.datatype;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.required;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.html_label;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.html_placeholder;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.html_hidden_field;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.field_type;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.php_type;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.regex;
+                    let dataFile =response;
+
+                    for (let formValues of dataFile.contact.standard ) {
+                        document.getElementById("formFile").innerHTML += formValues["field_name"] + "</br>"
+                        document.getElementById("formFile").innerHTML += formValues["marketing-in-one"] + "</br>"
+                        document.getElementById("formFile").innerHTML += formValues["email"] + "</br>"
+                        document.getElementById("formFile").innerHTML += formValues["datatype"] + "</br>"
+                        document.getElementById("formFile").innerHTML += formValues["required"] + "</br>"
+                        document.getElementById("formFile").innerHTML += formValues["html_label"] + "</br>"
+                        document.getElementById("formFile").innerHTML += formValues["html_placeholder"] + "</br>"
+                        document.getElementById("formFile").innerHTML += formValues["html_hidden_field"] + "</br>"
+                        document.getElementById("formFile").innerHTML += formValues["field_type"] + "</br>"
+                        document.getElementById("formFile").innerHTML += formValues["php_type"] + "</br>"
+                        document.getElementById("formFile").innerHTML += formValues["regex"] + "</br>"
+                        document.getElementById("formFile").innerHTML += "</br></br>"
 
 
-
+                    }
                 }
             });
         }
-
 
 
 

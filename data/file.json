@@ -3,8 +3,8 @@
   "contact": {
     "standard": [
       {
-        "field_name": "jyothipriya",
-        "marketing-in-one": "Email",
+        "field_name": "email",
+        "marketing-in-one": "email",
         "email": "",
         "datatype": "Email",
         "required": 1,

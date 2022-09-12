@@ -35,25 +35,15 @@ function showDataForTask(fileData) {
                     //showDataForTask(response);
                     let dataFile =response;
 
-                    for (let formValues of dataFile.contact.standard ) {
-                        document.getElementById("formFile").innerHTML += formValues["field_name"] + "</br>"
-                        document.getElementById("formFile").innerHTML += formValues["marketing-in-one"] + "</br>"
-                        document.getElementById("formFile").innerHTML += formValues["email"] + "</br>"
-                        document.getElementById("formFile").innerHTML += formValues["datatype"] + "</br>"
-                        document.getElementById("formFile").innerHTML += formValues["required"] + "</br>"
-                        document.getElementById("formFile").innerHTML += formValues["html_label"] + "</br>"
-                        document.getElementById("formFile").innerHTML += formValues["html_placeholder"] + "</br>"
-                        document.getElementById("formFile").innerHTML += formValues["html_hidden_field"] + "</br>"
-                        document.getElementById("formFile").innerHTML += formValues["field_type"] + "</br>"
-                        document.getElementById("formFile").innerHTML += formValues["php_type"] + "</br>"
-                        document.getElementById("formFile").innerHTML += formValues["regex"] + "</br>"
-                        document.getElementById("formFile").innerHTML += "</br></br>"
-
-
+                    for (let formParameters of dataFile.contact.standard) {
+                       // document.getElementById("formFile").innerHTML += formParameters["field_name"] + "</br>"
+                        //document.getElementById("formFile").innerHTML += `<input type="${formParameters}"> </br></br>`;
                     }
                 }
             });
         }
+
+
 
 
 

@@ -20,7 +20,7 @@
         "first_name":"",
         "type":"text",
         "required":0,
-        "html_label":"Text",
+        "html_label":"text",
         "html_placeholder":"FirstName",
         "html_hidden_field":0,
         "field_type":"Standard",

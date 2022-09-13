@@ -30,20 +30,28 @@ function showDataForTask(fileData) {
             $.ajax({
                 type: "GET",
                 async: "false",
-                url: "data/file.json",
+                url: "data/data.json",
                 success: function (response) {
                     //showDataForTask(response);
                     let dataFile =response;
 
                     for (let formParameters of dataFile.contact.standard) {
-                       // document.getElementById("formFile").innerHTML += formParameters["field_name"] + "</br>"
-                        //document.getElementById("formFile").innerHTML += `<input type="${formParameters}"> </br></br>`;
+                        document.getElementById("formFile").innerHTML +=
+                            `<label> ${formParameters["html_placeholder"]} </label> </br>`
+
+                        document.getElementById("formFile").innerHTML +=
+                            `<input name="${formParameters.field_name}" type="${formParameters.type}" id="fieldName" pattern="${formParameters.pattern}"
+                              required="${formParameters.required}" html_label="${formParameters.html_label}" 
+                              php_type="${formParameters.php_type}"> </br></br>`;
+
+
                     }
+
+                    document.getElementById("formFile").innerHTML += `<button id="submitButton" type="submit">Submit</button>`;
                 }
+
             });
-        }
-
-
+}
 
 
 

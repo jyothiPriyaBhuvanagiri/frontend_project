@@ -40,8 +40,10 @@ function showDataForTask(fileData) {
                             `<label> ${formParameters["html_placeholder"]} </label> </br>`
 
                         document.getElementById("formFile").innerHTML +=
-                            `<input name="${formParameters.field_name}" type="${formParameters.type}" id="fieldName" pattern="${formParameters.pattern}"
-                              required="${formParameters.required}" html_label="${formParameters.html_label}" 
+                            `<input name="${formParameters.field_name}" type="${formParameters.type}" id="fieldName"
+                              pattern="${formParameters.pattern}"
+                              required="${formParameters.required}" 
+                              html_label="${formParameters.html_label}" 
                               php_type="${formParameters.php_type}"> </br></br>`;
 
 
